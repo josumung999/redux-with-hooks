@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { RateTable } from "./RateTable";
 import { CurrencyCodePicker } from "./CurrencyCodePicker";
@@ -8,9 +8,6 @@ import { getExchangeRates } from "../api";
 const supportedCurrencies = ["USD", "EUR", "JPY", "CAD", "GBP", "MXN"];
 
 export function ExchangeRate() {
-  // const [amount, setAmount] = useState("1.50");
-  // const [currencyCode, setCurrencyCode] = useState("USD");
-
   const amount  = useSelector((state) => state.amount);
   const currencyCode = useSelector((state) => state.currencyCode);  
 

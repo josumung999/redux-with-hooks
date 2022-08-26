@@ -1,5 +1,5 @@
 const initialState = {
-  name: 'Josué Munganga',
+  fullName: 'Josué Munganga',
   loggedIn: false
 }
 
@@ -8,4 +8,4 @@ export function userReducer(state = initialState, action) {
 }
 
 // selectors
-export const getName = state => state.user.name;
+export const getName = state => state.user.fullName.split(" ")[0];

@@ -8,4 +8,4 @@ export function userReducer(state = initialState, action) {
 }
 
 // selectors
-export const getName = state => state.user.fullName.split(" ")[0];
+export const getName = state => state.user.fullName.split(" ")[0]

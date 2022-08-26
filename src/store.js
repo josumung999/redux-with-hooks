@@ -6,13 +6,20 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-  if (action.type === "AMOUNT_CHANGED") {
-    return {
-      ...state,
-      amount: action.payload
-    }
-  }                  
-  return state;
+  switch(action.type) {
+    case 'AMOUNT_CHANGED':
+      return {
+        ...state,
+        amount: action.payload
+      }
+    case 'CURRENCY_CODE_CHANGED':
+      return {
+        ...state,
+        currencyCode: action.payload
+      }
+    default:
+      return state;
+  }
 }
 
 export const store =  createStore(reducer);

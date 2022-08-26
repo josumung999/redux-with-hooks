@@ -23,16 +23,6 @@ export function ExchangeRate() {
     });
   }, [currencyCode]);
 
-  // const handleCurrencyCode = useCallback(
-  //   (e) => setCurrencyCode(e.target.value),
-  //   []
-  // );
-
-  // const handleAmountChange = useCallback((e) => {
-  //   let newAmount = e.target.value;
-  //   setAmount(newAmount);
-  // }, []);
-
   return (
     <>
       <section>

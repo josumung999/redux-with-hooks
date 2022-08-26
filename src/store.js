@@ -5,7 +5,13 @@ const initialState = {
   currencyCode: "JPY"
 }
 
-const reducer = (state = initialState, action) => {                  
+const reducer = (state = initialState, action) => {
+  if (action.type === "AMOUNT_CHANGED") {
+    return {
+      ...state,
+      amount: action.payload
+    }
+  }                  
   return state;
 }
 
